@@ -1,0 +1,29 @@
+﻿@model List<NealsLearningCenter.Class>
+
+@{
+    ViewBag.Title = "ClassList";
+}
+
+<h2>Classes</h2>
+@if (Model.Count > 0)
+{
+    <table class="table-condensed">
+
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        @foreach (var cl in Model)
+        {
+            <tr>
+                <td>@cl.ClassName</td>
+                <td>@cl.ClassDescription</td>
+                <td>@string.Format("{0:C}", cl.ClassPrice)</td>
+            </tr>
+        }
+
+    </table>
+}
+
+

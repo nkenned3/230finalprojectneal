@@ -1,0 +1,16 @@
+﻿body {
+}
+#enrolling {
+    overflow: hidden;
+    padding: 10px 10px 10px 10px;
+}
+
+#enroll-drop {
+    padding: 10px 5px 10px 5px;
+    float: left;
+}
+
+#drop-submit {
+    padding: 10px 5px 10px 5px;
+    overflow: hidden;
+}

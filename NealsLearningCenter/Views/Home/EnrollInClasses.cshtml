@@ -1,0 +1,29 @@
+﻿@model List<SelectListItem>
+
+@{
+    ViewBag.Title = "EnrollInClasses";
+}
+
+<h2>Enroll In Classes</h2>
+@if (Model != null)
+{
+    <section id="loginForm">
+        @using (Html.BeginForm("EnrollInClasses", "Home", new { ReturnUrl = ViewBag.ReturnUrl },
+                                       FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "TheForm" }))
+        {
+            <div class="form-group" id="enrolling">
+                    <div id="enroll-drop">@Html.DropDownList("EnrollInClasses", Model, "Select Classes", new { @class = "form-control" })</div>
+                <div id="drop-submit"><input type="submit" value="Enroll" class="btn btn-default" /></div>
+            </div>
+
+        }
+    </section>
+}
+else
+{
+    <p>You've enrolled.</p>
+    <p>@Html.ActionLink("Enroll in Another Class", "EnrollInClasses", "Home")</p>
+}
+
+
+

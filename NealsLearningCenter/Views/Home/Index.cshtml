@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>The Learning Center</h1>
+    <p class="lead">The place for technology and development classes.</p>
+    <p><a href="~/Home/ClassList" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <style>
+        .btn-new {
+            color: #ffffff;
+            background-color: #ffa500;
+            border-color: #cccccc;
+        }
+    </style>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Class List", "ClassList", "Home")</h2>
+        <p>
+            See all our class offerings
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Your Enrolled Classes", "StudentClasses", "Home")</h2>
+        <p>See what classes you are enrolled in.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Enroll in a class", "EnrollInClasses", "Home")</h2>
+        <p>Take a new class.</p>
+    </div>
+</div>
